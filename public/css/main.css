@@ -2,6 +2,12 @@
   /*remove margin e padding de todos os elementos*/
   margin: 0;
   padding: 0;
+
+  /*modifica o comportamento padrão do cálculo do tamanho do box
+  por padrão content-box, onde o padding não faz parte do cálculo do
+  tamanho do box. mudando para border-box, tanto o conteúdo como o 
+  padding farão parte do cálculo do tamanho da caixa*/
+  box-sizing: border-box;
 }
 
 :root {
