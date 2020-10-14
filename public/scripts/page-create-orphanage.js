@@ -79,3 +79,21 @@ function deletePhotoField(event) {
 
     console.log(event.currentTarget);
 }
+
+function toggleSelect(event) {
+    //update .active
+    const buttons = document.querySelectorAll(".button-select button");
+    
+    buttons.forEach(element => element.classList.remove("active")); /*arrow function não precisa de () nos parâmetros se apenas um for passado e não precisa de {} no corpo se apenas uma linha a ser executada*/
+
+    //get clicked button
+    const button = event.currentTarget;
+    button.classList.add("active");
+
+    //update hidden input value
+    const input = document.querySelector("#open-on-weekends");
+    
+    input.value = button.dataset.value; /*dataset.x retorna valor de inserido na propriedade data-x do elemento*/
+
+    console.log(input.value);
+}
