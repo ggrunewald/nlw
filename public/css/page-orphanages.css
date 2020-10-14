@@ -39,6 +39,10 @@ aside footer p {
     animation-delay: 200ms;
 }
 
+#mapid .leaflet-popup{
+    margin: 10px 5px;
+}
+
 a.create-orphanage {
     width: 6.4rem;
     height: 6.4rem;
@@ -46,7 +50,7 @@ a.create-orphanage {
     border: 0;
     border-radius: 2rem;
 
-    /*alinha a iomagem do + com o div onde está o botão fazendo com que fique centralizado*/
+    /*alinha a imagem do + com o div onde está o botão fazendo com que fique centralizado*/
     display: flex;
     justify-content: center;
     align-items: center;
