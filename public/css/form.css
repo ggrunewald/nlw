@@ -103,3 +103,7 @@ fieldset + fieldset {   /*seleciona todos os irmãos do primeiro fieldset, ou se
     display: flex;
     cursor: pointer;
 }
+
+.new-upload + .new-upload {
+    margin-top: 2.4rem;
+}

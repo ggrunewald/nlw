@@ -41,4 +41,41 @@ map.on("click", (event) => {
     marker.addTo(map);
 });
 
+function addPhotoField() {
+    //get photo container #images
+    const container = document.getElementById('images');
 
+    //get container to be duplicated .new-image
+    const fieldsContainer = document.querySelectorAll('.new-upload');
+
+    //duplicate last added photo
+    const newFieldContainer = fieldsContainer[fieldsContainer.length - 1].cloneNode(true);
+
+    const input = newFieldContainer.children[0];
+
+    if(input.value === "")
+        return;
+
+    //clean value
+    input.value = "";
+
+    //add duplicated photo to the container
+    container.appendChild(newFieldContainer);
+}
+
+function deletePhotoField(event) {
+    const span = event.currentTarget;
+    
+    const fieldsContainer = document.querySelectorAll('.new-upload');
+
+    if(fieldsContainer.length === 1) {
+        span.parentNode.children[0].value = "";
+        return;
+    }
+
+    container = span.parentNode;
+
+    container.remove();
+
+    console.log(event.currentTarget);
+}

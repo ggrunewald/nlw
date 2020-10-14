@@ -81,7 +81,7 @@
 
                 <div class="new-upload">
                   <input name="images" placeholder="Cole o endereço da foto aqui" required>
-                  <span>
+                  <span onclick="deletePhotoField(event)">
                     <img src="./public/images/remove-file.svg" alt="Remover link">
                   </span>
                 </div>
@@ -89,7 +89,7 @@
 
                 
               </div>
-              <button type="button">  <!--comportamento padrão do button é submit, então muda o type para button de modo que ele seja um button comum-->
+              <button type="button" onclick="addPhotoField()">  <!--comportamento padrão do button é submit, então muda o type para button de modo que ele seja um button comum-->
                 <img src="./public/images/add-file.svg" alt="Nova Imagem">
               </button>
 
