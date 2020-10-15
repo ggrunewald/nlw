@@ -17,7 +17,7 @@
       align-items: center;
       justify-content: center;*/
 
-  width: min(90%, 112rem);
+  width: 1120px; /*min(90%, 112rem);*/
 }
 
 .location,
