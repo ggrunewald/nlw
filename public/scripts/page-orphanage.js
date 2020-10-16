@@ -1,5 +1,11 @@
+console.log("teste");
+
 //create array with gps coordinates of lar são josé
-const larSaoJoseCoord = [-30.0502031,-51.2008241];
+const spanCoord = document.querySelector("span[data-lat]");
+
+const orphCoord = [spanCoord.dataset.lat,spanCoord.dataset.lng];
+
+console.log(orphCoord);
 
 const options = {
     dragging: false,
@@ -10,21 +16,21 @@ const options = {
 }
 
 //create map tied to the mapid element
-const map = L.map('mapid', options).setView(larSaoJoseCoord, 15);
+const map = L.map('mapid', options).setView(orphCoord, 15);
 
 //insert tile layer into map
 L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(map);
 
 //change standard marker's icon to the project logo
 const icon = L.icon({
-    iconUrl: "./public/images/map-marker.svg",
+    iconUrl: "/images/map-marker.svg",
     iconSize: [58, 68],     //width height
     iconAnchor: [29, 68],   //what point will anchor on the map
     popupAnchor: [170,2]    //whar point popup will anchor on the icon
 });
 
 //removed popup because I don't wat the popup in this new page
-L.marker(larSaoJoseCoord, {icon: icon})
+L.marker(orphCoord, {icon: icon})
     .addTo(map);
 
 /*image gallery*/

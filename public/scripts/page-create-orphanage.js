@@ -9,16 +9,10 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(map);
 
 //change standard marker's icon to the project logo
 const icon = L.icon({
-    iconUrl: "./public/images/map-marker.svg",
+    iconUrl: "/images/map-marker.svg",
     iconSize: [58, 68],     //width height
     iconAnchor: [29, 68]   //what point will anchor on the map
 });
-/*
-const larSaoJoseCoord = [-30.0502031,-51.2008241];
-
-L.marker(larSaoJoseCoord, {icon: icon})
-    .addTo(map);
-*/
 
 let marker;
 
@@ -91,9 +85,33 @@ function toggleSelect(event) {
     button.classList.add("active");
 
     //update hidden input value
-    const input = document.querySelector("#open-on-weekends");
+    const input = document.querySelector("#open_on_weekends");
     
     input.value = button.dataset.value; /*dataset.x retorna valor de inserido na propriedade data-x do elemento*/
 
     console.log(input.value);
+}
+
+function validate(event){
+    //validade se lat e lng estão preenchidos
+    let coordInseridas = false;
+    
+    const inputs = document.querySelectorAll(".map-container input");
+    
+    const lat = inputs[0].value;
+    const lng = inputs[1].value;
+    
+    console.log("lat = " + lat);
+    console.log("lng = " + lng);
+    
+    coordInseridas = (lat !== "") && (lng !== "");
+    
+    console.log(coordInseridas);
+
+    if(!coordInseridas)
+    {
+        event.preventDefault();
+
+        alert("Por favor, selecione no mapa a localização do orfanato a ser inserido");
+    }
 }
