@@ -1,5 +1,3 @@
-console.log("teste");
-
 //create array with gps coordinates of lar são josé
 const spanCoord = document.querySelector("span[data-lat]");
 
@@ -29,7 +27,7 @@ const icon = L.icon({
     popupAnchor: [170,2]    //whar point popup will anchor on the icon
 });
 
-//removed popup because I don't wat the popup in this new page
+//removed popup because I don't want the popup in this new page
 L.marker(orphCoord, {icon: icon})
     .addTo(map);
 

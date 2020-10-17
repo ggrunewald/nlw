@@ -42,3 +42,45 @@ orphanagesList.forEach(span => {
 
     AddMarker(orphanage);
 });
+
+function listOrphanages(orphanages){
+    //prevents user from openning the orphanade list multiple times
+    const alreadyOpened = (document.querySelectorAll('.orphanageList').length > 0);
+    
+    if(alreadyOpened)
+        return;
+    
+    const orphanagesList = document.querySelectorAll('.orphanages-list span');
+
+    //Create menu div
+    const div = document.createElement('div');
+    div.id = 'orphanageList';
+    div.className = 'orphanageList';
+    div.classList.add("animate-up");
+    div.setAttribute("onclick", "closeListOrphanages()");
+    div.innerHTML = "<p> Lista de orfanatos</p><ul>"
+
+    orphanagesList.forEach(span => {
+        const orphanage = {
+            id: span.dataset.id,
+            name: span.dataset.name,
+            lat: span.dataset.lat,
+            lng: span.dataset.lng
+        };
+        
+        //adicionar lista de orfanatos ao menu  
+        div.innerHTML = div.innerHTML + "<li>" + orphanage.name + "</li>";
+        //console.log(orphanage);
+    });
+
+    div.innerHTML = div.innerHTML + "</ul>"
+
+    //append new div to the document 
+    document.body.appendChild(div); 
+}
+
+function closeListOrphanages(){
+    const element = document.querySelector(".orphanageList");
+
+    element.parentNode.removeChild(element);
+}
