@@ -31,7 +31,7 @@ Mapas Leaflet
 
 ### Vídeo demonstrativo da aplicação
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/bmVqGtyNIn8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+[![Video demonstrativo](http://img.youtube.com/vi/bmVqGtyNIn8/0.jpg)](http://www.youtube.com/watch?v=bmVqGtyNIn8 "Happy webapp desenvolvido durante a NLW da Rocketseat")
 
 O ícone usado no botão da funcionalidade extra foi desenvolvido por <a href="https://www.flaticon.com/authors/pixel-perfect" title="Pixel perfect">Pixel perfect</a> e baixado no site <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a>
 
