@@ -26,12 +26,13 @@ Backend Node.JS e SQLite
 Mapas Leaflet
 
 ### Screenshots da aplicação
-
+![Segunda tela do webapp](/public/screenshots/Screenshot_2.png?raw=true "Segunda tela: mapa")
+![Lista de orfanatos](/public/screenshots/Screenshot_3.png?raw=true "Funcionalidade extra desenvolvida")
 
 
 ### Vídeo demonstrativo da aplicação
 
-[![Video demonstrativo](http://img.youtube.com/vi/bmVqGtyNIn8/0.jpg)](http://www.youtube.com/watch?v=bmVqGtyNIn8 "Happy webapp desenvolvido durante a NLW da Rocketseat")
+[![Video demonstrativo](/public/screenshots/Screenshot_1.png)](http://www.youtube.com/watch?v=bmVqGtyNIn8 "Happy webapp desenvolvido durante a NLW da Rocketseat")
 
 O ícone usado no botão da funcionalidade extra foi desenvolvido por <a href="https://www.flaticon.com/authors/pixel-perfect" title="Pixel perfect">Pixel perfect</a> e baixado no site <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a>
 
